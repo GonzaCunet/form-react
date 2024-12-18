@@ -2,15 +2,19 @@ import React from "react";
 import { TextField } from "./TextField";
 import { Button } from "./Button";
 
-// type PropDeForm = {
-//   OnLogin: any;
-// };
+type PropDeForm = {
+  OnLogin: any;
+};
 
-function Form() {
+function Form(prop: PropDeForm) {
   return (
-    <form>
-      <TextField>Email</TextField>
-      <TextField>Nombre</TextField>
+    <form onSubmit={prop.OnLogin}>
+      <TextField name="email" type="text">
+        Email
+      </TextField>
+      <TextField name="pass" type="password">
+        Contraseña
+      </TextField>
       <Button>Ingresar</Button>
     </form>
   );

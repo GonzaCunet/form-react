@@ -6,7 +6,7 @@ class App extends React.Component<any, any> {
     super(props);
   }
   render() {
-    return <Form />;
+    return <Form OnLogin={}></Form>;
   }
 }
 

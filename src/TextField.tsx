@@ -1,16 +1,15 @@
 import React from "react";
 
-// type TextFieldProps = {
-//   typeInput?: any;
-//   labelText?: any;
-//   InputName?: any;
-//   children?: any;
-// };
-function TextField(p) {
+type TextFieldProps = {
+  type: string;
+  name: string;
+  children: any;
+};
+function TextField(prop: TextFieldProps) {
   return (
     <div>
-      <label>{p.children}</label>
-      <input></input>
+      <label>{prop.children}</label>
+      <input type={prop.type}></input>
     </div>
   );
 }
